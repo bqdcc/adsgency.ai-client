@@ -1,6 +1,6 @@
 # adsgency.ai client
 
-## 安装
+## Install
 ```
 git clone https://github.com/bqdcc/adsgency.ai-client.git
 cd adsgency.ai-client
