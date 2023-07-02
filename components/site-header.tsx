@@ -22,10 +22,12 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import TopTip from "./top-tip";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b-2 border-b-[#9e2aff] bg-white text-[#333333] shadow-md">
+    <header className="w-full border-b-2 border-b-[#9e2aff] bg-white text-[#333333] shadow-md">
+      <TopTip />
       <div className="container flex h-[70px] items-center space-x-4 sm:justify-between sm:space-x-0">
         <AlignJustify className="cursor-pointer" />
         <Link href="/">

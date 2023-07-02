@@ -1,6 +1,5 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { Info, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -14,13 +13,12 @@ export default function TopTip() {
     setShow(!isCloseTip);
   }, [isCloseTip]);
 
+  if (!isShow) {
+    return null;
+  }
+
   return (
-    <div
-      className={cn([
-        "relative flex h-[40px] items-center justify-center bg-[#f2d2ff] text-center",
-        isShow ? "flex" : "hidden",
-      ])}
-    >
+    <div className="relative flex h-[40px] items-center justify-center bg-[#f2d2ff] text-center">
       <Info color="#c64ffd" />
       <Link
         href="https://adsgency.ai/"

@@ -3,7 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocalStorage } from "react-use";
 
 function TaskType() {
   const tasks = [
@@ -156,8 +157,16 @@ function FromTheCommunity() {
 }
 
 export default function Home() {
+  const [isCloseTip] = useLocalStorage("close-tip");
+
+  const [isShow, setShow] = useState(true);
+
+  useEffect(() => {
+    setShow(!isCloseTip);
+  }, [isCloseTip]);
+
   return (
-    <main className="flex-1 bg-[#f9f9f9] px-[80px] py-[40px]">
+    <main className={cn(["flex-1 bg-[#f9f9f9] px-[80px] py-[40px] overflow-y-auto",!isShow?"max-h-[calc(100vh-70px)]":"max-h-[calc(100vh-70px-40px)]"])}>
       <TaskType />
 
       <RecentProjects />

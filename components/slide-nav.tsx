@@ -17,7 +17,7 @@ import { LogOut } from "lucide-react";
 export default function SlideNav() {
   const pathname = usePathname();
   return (
-    <nav className="flex  w-[265px] flex-col bg-[#242424] pb-[30px] pl-[12px] pr-[28px] pt-[40px]">
+    <nav className="flex w-[265px] flex-col bg-[#242424] pb-[30px] pl-[12px] pr-[28px] pt-[40px]">
       <Accordion type="single" collapsible className="w-full flex-1 space-y-4">
         {NavConfig.map((item) => (
           <AccordionItem key={item.title} value={item.title} className="border-b-0">
