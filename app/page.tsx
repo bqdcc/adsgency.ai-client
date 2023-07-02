@@ -63,7 +63,7 @@ function TaskType() {
       <div className="text-center text-[2.5rem]">
         What agency tasks do you have today?
       </div>
-      <div className="mt-[30px] flex items-center justify-center gap-[40px]">
+      <div className="mt-[30px] flex items-center justify-center gap-[40px] bg-[#f6f6f6]">
         {tasks.map((item) => (
           <div
             key={item.title}
