@@ -166,7 +166,12 @@ export default function Home() {
   }, [isCloseTip]);
 
   return (
-    <main className={cn(["flex-1 bg-[#f9f9f9] px-[80px] py-[40px] overflow-y-auto",!isShow?"max-h-[calc(100vh-70px)]":"max-h-[calc(100vh-70px-40px)]"])}>
+    <main
+      className={cn([
+        "flex-1 overflow-y-auto bg-[#f9f9f9] px-[80px] py-[40px]",
+        !isShow ? "max-h-[calc(100vh-70px)]" : "max-h-[calc(100vh-70px-40px)]",
+      ])}
+    >
       <TaskType />
 
       <RecentProjects />
