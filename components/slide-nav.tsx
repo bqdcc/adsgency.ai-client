@@ -20,7 +20,7 @@ export default function SlideNav() {
     <nav className="flex  w-[265px] flex-col bg-[#242424] pb-[30px] pl-[12px] pr-[28px] pt-[40px]">
       <Accordion type="single" collapsible className="w-full flex-1 space-y-4">
         {NavConfig.map((item) => (
-          <AccordionItem value={item.title} className="border-b-0">
+          <AccordionItem key={item.title} value={item.title} className="border-b-0">
             <AccordionTrigger
               className={cn([
                 buttonVariants({
@@ -43,6 +43,7 @@ export default function SlideNav() {
               <AccordionContent>
                 {item.children.map((chil) => (
                   <Button
+                    key={chil.title}
                     className={cn([
                       "mt-3 w-full justify-start gap-3 text-white",
                       pathname.startsWith(item.href)

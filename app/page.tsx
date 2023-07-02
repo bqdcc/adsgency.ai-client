@@ -66,7 +66,7 @@ function TaskType() {
         {tasks.map((item) => (
           <div
             key={item.title}
-            className="flex h-[164px] w-[246px] flex-col items-center justify-center gap-3 rounded-md border-2 border-[#e7e7e7] transition-all hover:shadow-md"
+            className="flex h-[164px] w-[246px] cursor-pointer flex-col items-center justify-center gap-3 rounded-md border-2 border-[#e7e7e7] transition-all hover:shadow-md"
           >
             {item.icon}
             <span>{item.title}</span>
@@ -127,6 +127,7 @@ function FromTheCommunity() {
       <div className="mt-[20px]">
         {types.map((item) => (
           <Button
+            key={item.title}
             className={cn([
               "px-8",
               active === item.title ? "bg-[#cb4fff]" : "",
