@@ -64,7 +64,7 @@ export default function SlideNav() {
       </Accordion>
       <div className="space-y-5">
         <Image
-          src="/images/7DayTrial.png"
+          src="/adsgency.ai-client/images/7DayTrial.png"
           alt="7DayTrial"
           width={233}
           height={104}
