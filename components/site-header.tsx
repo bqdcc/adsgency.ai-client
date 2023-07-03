@@ -23,16 +23,24 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import TopTip from "./top-tip";
+import useNavState from "@/hooks/useNavState";
 
 export function SiteHeader() {
+  const [isOpenNav, setOpenNav] = useNavState();
+
   return (
     <header className="w-full border-b-2 border-b-[#9e2aff] bg-white text-[#333333] shadow-md">
       <TopTip />
       <div className="container flex h-[70px] items-center space-x-4 sm:justify-between sm:space-x-0">
-        <AlignJustify className="cursor-pointer" />
+        <AlignJustify
+          className="cursor-pointer"
+          onClick={() => {
+            setOpenNav(!isOpenNav);
+          }}
+        />
         <Link href="/">
           <Image
-            src={"/adsgency.ai-client/images/icon.png"}
+            src={"/images/icon.png"}
             alt={"icon"}
             width={177}
             height={48}
@@ -40,7 +48,7 @@ export function SiteHeader() {
           />
         </Link>
         <div className="flex flex-1 items-center justify-start space-x-4">
-          <nav className="flex items-center space-x-1">
+          <nav className="hidden items-center space-x-1 xl:flex">
             {siteConfig.mainNav.map((item) => (
               <Link key={item.title} href={item.href}>
                 <div
@@ -58,6 +66,20 @@ export function SiteHeader() {
               </Link>
             ))}
           </nav>
+          <div className="xl:hidden">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <AlignJustify className="cursor-pointer" onClick={() => {}} />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-46">
+                {siteConfig.mainNav.map((item) => (
+                  <DropdownMenuItem key={item.title} className="cursor-pointer">
+                    <span className="text-[20px]">{item.title}</span>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
         </div>
         <div className="flex items-center gap-3">
           <Button className="bg-gradient-to-r from-violet-500 via-purple-500  to-fuchsia-500">
@@ -71,7 +93,7 @@ export function SiteHeader() {
               <Button className="gap-2 bg-white px-2 text-[#333] hover:bg-slate-100">
                 <Avatar className="h-[26px] w-[26px]">
                   <AvatarImage
-                    src="https://adsgency.ai-client/images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&w=128&h=128&dpr=2&q=80"
+                    src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&w=128&h=128&dpr=2&q=80"
                     alt="@shadcn"
                   />
                   <AvatarFallback>AI</AvatarFallback>

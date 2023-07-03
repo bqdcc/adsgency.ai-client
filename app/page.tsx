@@ -12,7 +12,7 @@ function TaskType() {
       title: "Strategy Planning",
       icon: (
         <Image
-          src="/adsgency.ai-client/images/strategy-planning.png"
+          src="/images/strategy-planning.png"
           alt="Strategy Planning"
           width={60}
           height={60}
@@ -24,7 +24,7 @@ function TaskType() {
       title: "Content Creation",
       icon: (
         <Image
-          src="/adsgency.ai-client/images/content-creation.png"
+          src="/images/content-creation.png"
           alt="Content Creation"
           width={60}
           height={60}
@@ -36,7 +36,7 @@ function TaskType() {
       title: "Social Analytics",
       icon: (
         <Image
-          src="/adsgency.ai-client/images/social-analytics.png"
+          src="/images/social-analytics.png"
           alt="Social Analytics"
           width={60}
           height={60}
@@ -48,7 +48,7 @@ function TaskType() {
       title: "Ads Managment",
       icon: (
         <Image
-          src="/adsgency.ai-client/images/ads-managment.png"
+          src="/images/ads-managment.png"
           alt="Ads Managment"
           width={60}
           height={60}
@@ -63,11 +63,11 @@ function TaskType() {
       <div className="text-center text-[2.5rem]">
         What agency tasks do you have today?
       </div>
-      <div className="mt-[30px] flex items-center justify-center gap-[40px] bg-[#f6f6f6]">
+      <div className="mt-[30px] grid grid-cols-1 place-items-center items-center justify-center gap-[40px] bg-[#f6f6f6] md:grid-cols-2 xl:grid-cols-4">
         {tasks.map((item) => (
           <div
             key={item.title}
-            className="flex h-[164px] w-[246px] cursor-pointer flex-col items-center justify-center gap-3 rounded-md border-2 border-[#e7e7e7] transition-all hover:shadow-md"
+            className="flex h-[164px] w-[80%] max-w-[246px] cursor-pointer flex-col items-center justify-center gap-3 rounded-md border-2 border-[#e7e7e7] transition-all hover:shadow-md"
           >
             {item.icon}
             <span>{item.title}</span>
@@ -86,7 +86,7 @@ function RecentProjects() {
         {Array.from({ length: 5 }).map((item, index) => (
           <Image
             key={index}
-            src="/adsgency.ai-client/images/project-1.png"
+            src="/images/project-1.png"
             alt="project-1"
             width={268}
             height={104}
@@ -144,7 +144,7 @@ function FromTheCommunity() {
         {Array.from({ length: 5 }).map((item, index) => (
           <Image
             key={index}
-            src="/adsgency.ai-client/images/community-1.png"
+            src="/images/community-1.png"
             alt="community-1"
             width={270}
             height={270}

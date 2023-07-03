@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import SlideNav from "@/components/slide-nav";
+import { TailwindIndicator } from "@/components/tailwind-indicator";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,8 +29,9 @@ export default function RootLayout({
           <SiteHeader />
           <div className="flex grow bg-[#F9F9F9]">
             <SlideNav />
-            <div className="grow">{children}</div>
+            <div className="flex-1">{children}</div>
           </div>
+          <TailwindIndicator />
         </div>
       </body>
     </html>
