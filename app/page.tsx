@@ -12,7 +12,7 @@ function TaskType() {
       title: "Strategy Planning",
       icon: (
         <Image
-          src="/images/strategy-planning.png"
+          src="/adsgency.ai-client/images/strategy-planning.png"
           alt="Strategy Planning"
           width={60}
           height={60}
@@ -24,7 +24,7 @@ function TaskType() {
       title: "Content Creation",
       icon: (
         <Image
-          src="/images/content-creation.png"
+          src="/adsgency.ai-client/images/content-creation.png"
           alt="Content Creation"
           width={60}
           height={60}
@@ -36,7 +36,7 @@ function TaskType() {
       title: "Social Analytics",
       icon: (
         <Image
-          src="/images/social-analytics.png"
+          src="/adsgency.ai-client/images/social-analytics.png"
           alt="Social Analytics"
           width={60}
           height={60}
@@ -48,7 +48,7 @@ function TaskType() {
       title: "Ads Managment",
       icon: (
         <Image
-          src="/images/ads-managment.png"
+          src="/adsgency.ai-client/images/ads-managment.png"
           alt="Ads Managment"
           width={60}
           height={60}
@@ -86,7 +86,7 @@ function RecentProjects() {
         {Array.from({ length: 5 }).map((item, index) => (
           <Image
             key={index}
-            src="/images/project-1.png"
+            src="/adsgency.ai-client/images/project-1.png"
             alt="project-1"
             width={268}
             height={104}
@@ -144,7 +144,7 @@ function FromTheCommunity() {
         {Array.from({ length: 5 }).map((item, index) => (
           <Image
             key={index}
-            src="/images/community-1.png"
+            src="/adsgency.ai-client/images/community-1.png"
             alt="community-1"
             width={270}
             height={270}

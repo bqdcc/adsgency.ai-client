@@ -40,7 +40,7 @@ export function SiteHeader() {
         />
         <Link href="/">
           <Image
-            src={"/images/icon.png"}
+            src={"/adsgency.ai-client/images/icon.png"}
             alt={"icon"}
             width={177}
             height={48}
@@ -93,7 +93,7 @@ export function SiteHeader() {
               <Button className="gap-2 bg-white px-2 text-[#333] hover:bg-slate-100">
                 <Avatar className="h-[26px] w-[26px]">
                   <AvatarImage
-                    src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&w=128&h=128&dpr=2&q=80"
+                    src="https://adsgency.ai-client/images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&w=128&h=128&dpr=2&q=80"
                     alt="@shadcn"
                   />
                   <AvatarFallback>AI</AvatarFallback>

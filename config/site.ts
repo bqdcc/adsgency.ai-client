@@ -7,23 +7,23 @@ export const siteConfig = {
   mainNav: [
     {
       title: "Generators",
-      href: "/",
+      href: "/adsgency.ai-client",
     },
     {
       title: "Discover",
-      href: "/",
+      href: "/adsgency.ai-client",
     },
     {
       title: "Education",
-      href: "/",
+      href: "/adsgency.ai-client",
     },
     {
       title: "Social Insights",
-      href: "/",
+      href: "/adsgency.ai-client",
     },
     {
       title: "Pricing",
-      href: "/",
+      href: "/adsgency.ai-client",
     },
   ],
 }
