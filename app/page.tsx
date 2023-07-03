@@ -63,11 +63,11 @@ function TaskType() {
       <div className="text-center text-[2.5rem]">
         What agency tasks do you have today?
       </div>
-      <div className="mt-[30px] flex items-center justify-center gap-[40px] bg-[#f6f6f6]">
+      <div className="mt-[30px] grid grid-cols-1 place-items-center items-center justify-center gap-[40px] bg-[#f6f6f6] md:grid-cols-2 xl:grid-cols-4">
         {tasks.map((item) => (
           <div
             key={item.title}
-            className="flex h-[164px] w-[246px] cursor-pointer flex-col items-center justify-center gap-3 rounded-md border-2 border-[#e7e7e7] transition-all hover:shadow-md"
+            className="flex h-[164px] w-[80%] max-w-[246px] cursor-pointer flex-col items-center justify-center gap-3 rounded-md border-2 border-[#e7e7e7] transition-all hover:shadow-md"
           >
             {item.icon}
             <span>{item.title}</span>
