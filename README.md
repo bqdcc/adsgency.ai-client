@@ -1,5 +1,7 @@
 # adsgency.ai client
 
+address: [https://bqdcc.github.io/adsgency.ai-client/](https://bqdcc.github.io/adsgency.ai-client/)
+
 ## Install
 ```
 git clone https://github.com/bqdcc/adsgency.ai-client.git
